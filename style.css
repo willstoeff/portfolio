@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root {
+    --image_gap: 20px;
+  }
+
 *{
     margin: 0px;
     padding: 0;
@@ -8,8 +12,6 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    /* background-color: #463a4a; */
-    /* background-color: #3a3c4a; */
     background-color: #3a3e56;
 }
 
@@ -22,68 +24,52 @@ a{
 }
 
 nav{
-    
     display: flex;
     justify-content: center; 
-    /* height: 10vh; */
-    /* box-sizing: border-box;
-    min-height: fit-content; */
-}
-.link{
-    background-size: cover;
-    gap: 1rem;
-    width: calc(10% - 10px);       /* Each item takes 50% minus the gap to account for spacing */
-    height: calc(10% - 10px);
-    /* height: 10px;
-    width: 10px; */
+    height: 80px;   
+    margin: 20px auto;   
+    gap: 20px;
 }
 
 .link img {
     object-fit: cover;
-    width: 100%;
+    width: 100%; 
     height: 100%;
-    }
+}
 
 #grid{
-    display: flex;                 /* Use flexbox for alignment */
-    flex-wrap: wrap;               /* Wrap items to the next row to create the grid */
-    justify-content: center;       /*Center the grid horizontally */
-    padding: 0 20px;               /* Add white space (padding) to the left and right */
-    gap: 10px;                     /* Add spacing between grid items */
-    max-width: 600px;              /* Optional: Set a max-width for better control */
-    margin: 0 auto;    
-}
-.logo{
-    justify-content: space-around;
-    text-align: center;
-    height: 6vh;
-    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--image_gap);
+    max-width: 600px;
+    margin: 40px auto;    
 }
 
-.logo:hover{
+#name{
+    text-align: center;
+    font-size: 4rem;
+}
+
+#name:hover{
     cursor: default;
 }
 
 .image{
-    width: calc(50% - 10px);       /* Each item takes 50% minus the gap to account for spacing */
+    width: calc(50% - var(--image_gap));
     height: calc(50% - 10px);
-    aspect-ratio: 1 / 1;           /* Maintain a square aspect ratio */
-    background-size: cover;        /* Ensure the background image covers the entire div */
-    background-position: center;   /* Center the image in the div */
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
 }
+
 .desc {
     padding: 15px;
     text-align: center;
-  }
+}
 
 .image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    }
-
-/* .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-} */
+}
