@@ -74,30 +74,28 @@ a{
     height: 100%;
 }
 
-.about_top{
+.about_body{
     justify-content: center;
     margin: 50px 10%;
 }
 
-.about_body{
+.about_content{
     max-width: 950px;
     margin: 0 auto;
 }
 
-.sub_header{
+.about_nav{
     justify-content: space-between;
     align-items: center;
     display: flex;
     height: 80px;     
 }
 
-
-
-.home{
+.home_btn{
     min-width: 50px;
     max-width: 50px;
 }
-.home img{
+.home_btn img{
     object-fit: cover;
     width: 100%;
     height: 100%; 
