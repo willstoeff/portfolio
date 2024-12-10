@@ -5,6 +5,7 @@
   }
 
 *{
+    border-style: solid;
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
@@ -56,7 +57,7 @@ a{
 }
 
 .image{
-    width: calc(50% - var(--image_gap));
+    width:calc(50% - calc(var(--image_gap) / 2));
     height: calc(50% - 10px);
     aspect-ratio: 1 / 1;
     background-size: cover;
@@ -74,29 +75,8 @@ a{
     height: 100%;
 }
 
-.grid_food{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--image_gap);
-    max-width: 1500px;
-    margin: 40px auto;    
-}
-.image_food{
-    width: calc(30% - var(--image_gap));
-    height: calc(30% - 10px);
-    aspect-ratio: 1 / 1;
-    background-size: cover;
-    background-position: center;
-}
-
-.image_food img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
 .about_body{
+    /* border-color: red; */
     justify-content: center;
     margin: 50px 10%;
 }
@@ -123,15 +103,69 @@ a{
     height: 100%; 
 }
 
-#about_paragraph{
+.about_paragraph{
     margin: 0 3%;
 }
 
-.hobbies_nav{
+.hobbies_body{
+    /* justify-content: center; */
+    margin: 0 50px;
+}
+
+
+.hobbies_content{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.sub_nav{
     justify-content: space-between;
     align-items: center;
     display: flex;
-    height: 80px;     
-    max-width: 1500px;
-    
+    margin: 0 auto;
+    /* height: 80px;          */
+}
+
+.grid_food{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--image_gap);
+    margin: 15px auto;    
+}
+
+.image_food{
+    width: calc(32.5% - calc(var(--image_gap)/2));
+    height: calc(30% - 10px);
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.image_food img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.grid_projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--image_gap);
+    margin: 15px auto;    
+}
+
+.project_div{
+    width: calc(32.5% - calc(var(--image_gap)/2));
+    height: calc(30% - 10px);
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.project_div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
