@@ -3,11 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <title>TV Remote</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="remote_body">
+        <div class="remote_content">
+            <nav class="remote_nav">
+                <h1 id="page_header">Super User TV Remote</h1>
+                <div class="home_btn" >
+                    <!-- <a href="https://willstoeff.github.io/portfolio/" target="_self"> -->
+                    <a href="http://127.0.0.1:5500/portfolio/index.html" target="_self">    
+                        <img src="images/house.png" alt="Home" title="Home">
+                    </a>
+                </div>
+            </nav>
+            <p class="remote_paragraph">
+                The Super User TV Remote functions just like a traditional infrared TV remote 
+                in that it emits IR pulses via an LED based on user input. The main difference 
+                is that it is programmed to adjust the TV's brightness and the TV's brightnes alone. 
+                <br><br>
+                The remote is comprised of a
+                rotary encoder for user input, an IR LED, and an STM32G0 MCU for control. The 
+                MCU runs a bare metal loop that constantly monitors the state of the encoder.  
+                Once the MCU detects movement, it determines the direction and then begins to
+                emit IR pulses. It begins by sending a string of commands that automatically
+                naviagte to the brightness settings. It then continues to send out the signal
+                for up or down until it no longer detects user input and times out.      
+                <br><br>
+                With the Super User TV Remote, changing the brighness of your TV is as simple as turning a dial 
+                (and reprogramming it to use the commands specific to your brand of TV).
+                <br><br>
+            </p>
+            <div id="remote_images">
+                <div class="remote_image">
+                    <a href="images/projects/remote_pcb_v1.jpg" target="_blank">
+                        <img src="images/projects/remote_pcb_v1.jpg" alt="pcb_v1">
+                    </a>
+                    <!-- <img src="images/projects/remote_pcb_v1.jpg" alt="pcb_v1" title="pcb_v1"> -->
+                    <figcaption>PCB_v1</figcaption>
+                </div>
+                <div class="remote_image">
+                    <a href="images/projects/remote_pcba_v2.jpg" target="_blank">
+                        <img src="images/projects/remote_pcba_v2.jpg" alt="pcba_v2">
+                    </a>
+                    <!-- <img src="images/projects/remote_pcba_v2.jpg" alt="pcba_v2" title="pcba_v2"> -->
+                    <figcaption>PCBA_v2</figcaption>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 :root {
     --image_gap: 20px;
+    --text_color: #d7d8e3;
   }
 
 *{
@@ -50,6 +51,7 @@ a{
 #name{
     text-align: center;
     font-size: 4rem;
+    color: var(--text_color);
 }
 
 #name:hover{
@@ -79,6 +81,7 @@ a{
     /* border-color: red; */
     justify-content: center;
     margin: 50px 10%;
+    color: var(--text_color);
 }
 
 .about_content{
@@ -110,6 +113,7 @@ a{
 .hobbies_body{
     /* justify-content: center; */
     margin: 0 50px;
+    color: var(--text_color);
 }
 
 
@@ -149,6 +153,7 @@ a{
 }
 
 .projects_body{
+    color: var(--text_color);
     margin: 0 50px;
 }
 
@@ -167,6 +172,7 @@ a{
 
 .project_div{
     background-color: #4f5371;
+    color: #e4e5f1;
     height: auto;
     min-height: 180px;
     border-style: solid;
@@ -241,3 +247,116 @@ h2{
         font-size: 0.9rem;
     }
   }
+
+.athlos_body{
+    color: var(--text_color);
+    justify-content: center;
+    margin: 50px 10%;
+}
+
+.athlos_content{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.athlos_nav{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 80px;     
+}
+
+.athlos_paragraph{
+    margin: 0 3%;
+}
+
+.remote_body{
+    /* border-color: red; */
+    justify-content: center;
+    margin: 50px 10%;
+}
+
+.remote_content{
+    color: var(--text_color);
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.remote_nav{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 80px;     
+}
+
+.remote_paragraph{
+    margin: 0 3%;
+}
+
+#remote_images{
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.remote_image {
+    width: 30%;
+    max-width: 200px
+}
+
+.remote_image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;   
+}
+
+.keyboard_body{
+    justify-content: center;
+    margin: 50px 10%;
+}
+
+.keyboard_content{
+    color: var(--text_color);
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.keyboard_nav{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    height: 80px;     
+}
+
+.keyboard_paragraph{
+    margin: 0 3%;
+}
+
+#keyboard_images{
+    /* max-height: 300px; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.keyboard_image {
+    width: 80%;
+    height: 30%;
+    /* max-width: 200px */
+}
+
+.keyboard_image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;   
+}
+
+.links{
+    color: #9bbbf1;
+}
+
+.bottom_text{
+    /* text-align: center; */
+}
