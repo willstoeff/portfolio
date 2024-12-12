@@ -21,17 +21,17 @@
             <p class="remote_paragraph">
                 The Super User TV Remote functions just like a traditional infrared TV remote 
                 in that it emits IR pulses via an LED based on user input. The main difference 
-                is that it is programmed to adjust the TV's brightness and the TV's brightnes alone. 
+                is that it is programmed to adjust the TV's brightness and the TV's brightness alone. 
                 <br><br>
                 The remote is comprised of a
                 rotary encoder for user input, an IR LED, and an STM32G0 MCU for control. The 
                 MCU runs a bare metal loop that constantly monitors the state of the encoder.  
                 Once the MCU detects movement, it determines the direction and then begins to
                 emit IR pulses. It begins by sending a string of commands that automatically
-                naviagte to the brightness settings. It then continues to send out the signal
+                navigate to the brightness settings. It then continues to send out the signal
                 for up or down until it no longer detects user input and times out.      
                 <br><br>
-                With the Super User TV Remote, changing the brighness of your TV is as simple as turning a dial 
+                With the Super User TV Remote, changing the brightness of your TV is as simple as turning a dial 
                 (and reprogramming it to use the commands specific to your brand of TV).
                 <br><br>
             </p>

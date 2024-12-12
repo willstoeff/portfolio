@@ -78,7 +78,6 @@ a{
 }
 
 .about_body{
-    /* border-color: red; */
     justify-content: center;
     margin: 50px 10%;
     color: var(--text_color);
@@ -111,7 +110,6 @@ a{
 }
 
 .hobbies_body{
-    /* justify-content: center; */
     margin: 0 50px;
     color: var(--text_color);
 }
@@ -127,7 +125,6 @@ a{
     align-items: center;
     display: flex;
     margin: 0 auto;
-    /* height: 80px;          */
 }
 
 .grid_food{
@@ -271,7 +268,6 @@ h2{
 }
 
 .remote_body{
-    /* border-color: red; */
     justify-content: center;
     margin: 50px 10%;
 }
@@ -334,7 +330,6 @@ h2{
 }
 
 #keyboard_images{
-    /* max-height: 300px; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -344,7 +339,6 @@ h2{
 .keyboard_image {
     width: 80%;
     height: 30%;
-    /* max-width: 200px */
 }
 
 .keyboard_image img{
@@ -355,8 +349,4 @@ h2{
 
 .links{
     color: #9bbbf1;
-}
-
-.bottom_text{
-    /* text-align: center; */
 }
