@@ -3,6 +3,7 @@
 :root {
     --image_gap: 20px;
     --text_color: #d7d8e3;
+    /* #b2cad8  icon color*/
   }
 
 *{
@@ -52,6 +53,7 @@ a{
     text-align: center;
     font-size: 4rem;
     color: var(--text_color);
+    color: #e1e3f1;
 }
 
 #name:hover{
