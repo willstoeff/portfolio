@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
     --image_gap: 20px;
@@ -14,7 +15,8 @@
 }
 
 body{
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-family: "Quicksand", sans-serif;
     background-color: #3a3e56;
 }
 
@@ -51,34 +53,23 @@ a{
 
 #name{
     text-align: center;
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: var(--text_color);
     color: #e1e3f1;
-    margin: 70px 0 ;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    font-weight: 400;
 }
 
 #name:hover{
     cursor: default;
 }
 
-.image{
-    width:calc(50% - calc(var(--image_gap) / 2));
-    height: calc(50% - 10px);
-    aspect-ratio: 1 / 1;
-    background-size: cover;
-    background-position: center;
-}
-
-.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-.image img {
+/* .image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
+} */
 
 .about_body{
     justify-content: center;
@@ -360,39 +351,48 @@ h2{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    /* gap: 0px; */
     width: 100%;
     max-width: 800px;
-    /* min-width: 00px; */
     margin: 0 auto;
     height: 600px;
 }
 
 .w_grid img {
+    border-radius: 10px;
     width: 100%;
-    height: 85%;
-    /* height: auto; */
+    height: 100%;
     object-fit: cover;
+    transition: background-color 0.4s;
 }
 
+/* .w_grid img:hover{
+    background-color: #4d5167;
+}  */
 
-@media screen and (max-width: 700px) {
+.image{
+    border-radius: 10px;
+} 
+
+.image img:hover{
+    background-color: #4d5167;
+} 
+
+.effect-on{
+    background-color: #4d5167; 
+}
+@media screen and (max-width: 800px) {
     .w_grid img {
         height: auto;
     }
   }
 
-.w-grid a {
-    display: contents;
-}
-
-#linkedin_icon { grid-column: 2; grid-row: 1; }
+#linkedin_icon { grid-column: 2; grid-row: 1;}
 #resume_icon { grid-column: 2; grid-row: 2; }
-#project_icon { grid-column: 3; grid-row: 3; }
+#project_icon { grid-column: 3; grid-row: 3;}
 #logo_icon { grid-column: 4; grid-row: 2; }
 #food_icon { grid-column: 5; grid-row: 3; }
 #contact_icon { grid-column: 6; grid-row: 2; }
-#github_icon { grid-column: 6; grid-row: 1; }
+#github_icon { grid-column: 6; grid-row: 1;}
 
 .contact_body{
     justify-content: center;
