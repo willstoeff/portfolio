@@ -470,3 +470,17 @@ h2{
     visibility: visible;
     opacity: 1;
   }
+
+  #pic_of_me_div{
+    border-color: green;
+    object-fit: cover;
+    margin: 20px auto;
+    width: 40%;
+  }
+
+  .me_image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
