@@ -16,6 +16,8 @@ let effectOffInterval_s = 100;  //Interval of effect off call
 
 let isEffectRunning = false; // Track if the effect is running
 
+console.log("v2.2");
+
 effectTimeoutID = setTimeout(function (){
     effectIntervalID = setInterval(start_effect, effectInterval_s);
     }, effectStartDelay_s);
