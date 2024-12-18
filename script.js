@@ -9,7 +9,7 @@ let imageIDs = ["linkedin_img", "resume_img", "project_img", "logo_img", "cookin
 
 let effectStartDelay_s = 12000;  //Idle time before effect starts
 let effectInterval_s = 7000;    //Time between effect running
-let effectOffDelay_s = 1000;    //Wait time of off effect to chase on effect 
+let effectOffDelay_s = 1500;    //Wait time of off effect to chase on effect
 
 let effectStartInterval_s = 100;//Interval of effect on call
 let effectOffInterval_s = 100;  //Interval of effect off call
