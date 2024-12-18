@@ -27,6 +27,10 @@ a{
     transition: all 300ms ease;
 }
 
+.page_header{
+    font-size: 2.5rem;
+}
+
 #index_nav{
     display: flex;
     justify-content: center; 

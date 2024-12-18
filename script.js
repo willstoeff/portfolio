@@ -1,7 +1,7 @@
-let effectOnID = 0;
-let effectOffID = 0;
-let effectTimeoutID = 0;
-let effectIntervalID = 0;
+let effectOnID = null;
+let effectOffID = null;
+let effectTimeoutID = null;
+let effectIntervalID = null;
 let indexOn = 0;
 let indexOff = 0;
 let images = document.querySelectorAll('.image');
@@ -9,12 +9,16 @@ let imageIDs = ["linkedin_img", "resume_img", "project_img", "logo_img", "cookin
 
 let effectStartDelay_s = 12000;  //Idle time before effect starts
 let effectInterval_s = 7000;    //Time between effect running
-let effectOffDelay_s = 1500;    //Wait time of off effect to chase on effect
+let effectOffDelay_s = 1100;    //Wait time of off effect to chase on effect
 
 let effectStartInterval_s = 100;//Interval of effect on call
 let effectOffInterval_s = 100;  //Interval of effect off call
 
-effectTimeoutID = setTimeout(function (){effectIntervalID = window.setInterval(start_effect, effectInterval_s);}, effectStartDelay_s);
+let isEffectRunning = false; // Track if the effect is running
+
+effectTimeoutID = setTimeout(function (){
+    effectIntervalID = setInterval(start_effect, effectInterval_s);
+    }, effectStartDelay_s);
 
 monitorIconHovering();
 monitorVisibilityChange();
@@ -28,6 +32,7 @@ function monitorVisibilityChange(){
             clearInterval(effectOffID);
             indexOn = 0;
             indexOff = 0;
+            isEffectRunning = false;
             for(let i = 0; i<7; i++){
                 const img = document.getElementById(imageIDs[i]);
                 img.classList.remove('effect-on')
@@ -35,21 +40,28 @@ function monitorVisibilityChange(){
         } 
         else 
         {
-            effectTimeoutID = setTimeout(function (){effectIntervalID = window.setInterval(start_effect, effectInterval_s);}, effectStartDelay_s);
+            effectTimeoutID = setTimeout(function (){
+                effectIntervalID = setInterval(start_effect, effectInterval_s);
+                }, effectStartDelay_s);
         }
   });
 }
 
 function start_effect(){
-    effectOnID = window.setInterval(effectOn, effectStartInterval_s);
-    setTimeout(function() {effectOffID = window.setInterval(effectOff, effectOffInterval_s);}, effectOffDelay_s);
+    if (isEffectRunning) return; // Prevent overlapping effects
+    isEffectRunning = true;
+
+    effectOnID = setInterval(effectOn, effectStartInterval_s);
+    setTimeout(function() {
+        effectOffID = setInterval(effectOff, effectOffInterval_s);
+    }, effectOffDelay_s);
 
 }
 
 function effectOn(){
-    if(indexOn<7){
+    if(indexOn<imageIDs.length){
         const img = document.getElementById(imageIDs[indexOn]);
-        img.classList.add('effect-on')
+        img.classList.add('effect-on');
         indexOn++;
     }
     else{
@@ -59,14 +71,15 @@ function effectOn(){
 }
 
 function effectOff(){
-    if(indexOff<7){
+    if(indexOff<imageIDs.length){
         const img = document.getElementById(imageIDs[indexOff]);
-        img.classList.remove('effect-on')
+        img.classList.remove('effect-on');
         indexOff++;
     }
     else{
         clearInterval(effectOffID);
         indexOff = 0;
+        isEffectRunning = false;
     }
 }
 
@@ -76,7 +89,6 @@ function monitorIconHovering() {
             clearTimeout(effectTimeoutID);
             clearInterval(effectOnID);
             clearInterval(effectOffID);
-            
             indexOn = 0;
             indexOff = 0;
             if(effectIntervalID){
@@ -86,9 +98,12 @@ function monitorIconHovering() {
                     img.classList.remove('effect-on')
                 }
             }
-            effectTimeoutID = setTimeout(function (){effectIntervalID = window.setInterval(start_effect, effectInterval_s);}, effectStartDelay_s);
+            isEffectRunning = false;
+            effectTimeoutID = setTimeout(function (){
+                effectIntervalID = setInterval(start_effect, effectInterval_s);
+            }, effectStartDelay_s);
         });
-    })
+    });
 }
 
 function overFunc() {
